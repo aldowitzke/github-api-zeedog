@@ -49,7 +49,7 @@ curl --location --request GET 'localhost:3000/v1/authorization'
 Exemplo de response:
 ```
 Status: 200 OK
-eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5ODU5MTAxfQ.kyJkZUD6tuOGhUCtHygkcjTpBGROadGBFrJiKxtAZuw
+eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5OTA3MzQyfQ.Fs0UO5bWcJTeCNnCWALrWYmbRNvzE5Z5JVt6WCTOHtg
 ```
 
 ### GET /repositories
@@ -67,11 +67,11 @@ Você tem a possibilidade de filtrar os repositórios utilizando os seguintes qu
 | page | Página que será buscada|
 | per_page| Número de repositórios por página |
 
-Exemplo de requisição
+Exemplo de requisição (alterar o JWT token para o recebido na ultima requisição do /authorization)
 
 ```
-curl --location --request GET 'localhost:3000/v1/repositories?language=javascript&sort=stars&order=desc&page=1&per_page=10' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5ODU5MTAxfQ.kyJkZUD6tuOGhUCtHygkcjTpBGROadGBFrJiKxtAZuw'
+curl --location --request GET 'localhost:3000/v1/repositories?sort=stars&order=desc&page=1&per_page=10' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5OTA3MzQyfQ.Fs0UO5bWcJTeCNnCWALrWYmbRNvzE5Z5JVt6WCTOHtg'
 ```
 Exemplo de response
 
