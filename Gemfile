@@ -32,7 +32,9 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
 end
+
 
 group :development do
   gem 'listen', '~> 3.3'
