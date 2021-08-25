@@ -5,12 +5,22 @@ default: &default
 
 development:
   <<: *default
-  database: flatiron_mod3_development
+  adapter: postgresql
+  encoding: unicode
+  database: 'zeedog-github-api'
+  username: 'aldowitzke'
+  password: '123456789'
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
-  database: flatiron_mod3_test
+  adapter: postgresql
+  encoding: unicode
+  database: 'zeedog-github-api'
+  username: 'aldowitzke'
+  password: '123456789'
 
 production:
   <<: *default
-  database: flatiron_mod3_production
+  database: zeedog-github-api
