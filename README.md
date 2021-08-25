@@ -10,6 +10,12 @@ A aplicação foi construída utilizando as seguintes ferramentas:
 
 ## Começando
 
+### Heroku
+
+O projeto está no Heroku e você pode fazer as requisições a partir da base_url https://github-api-zeedog.herokuapp.com/v1 (doc mais abaixo)
+
+### Local
+
 Para instalar o projeto, rode os seguintes códigos no seu terminal dentro do seu dirétorio de projetos:
 ```
 1) Abra seu terminal e clone o projeto:
@@ -22,7 +28,9 @@ cd github-api-zeedog
 3) Vamos instalar as gems:
 bundle install
 
-4) Rode o servidor:
+4) Atualize o arquivo config/database.yml com suas credenciais do postgres local
+
+5) Rode o servidor:
 rails server
 
 6) Para rodar os testes:
@@ -31,7 +39,7 @@ rspec
 
 ## Realizando requisições
 
-### /v1/authorization
+### GET /authorization
 
 Primeiramente, é necessário fazer uma requisição para o endpoint de authorizations para receber um token JWT
 
@@ -44,13 +52,14 @@ Status: 200 OK
 eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5ODU5MTAxfQ.kyJkZUD6tuOGhUCtHygkcjTpBGROadGBFrJiKxtAZuw
 ```
 
-### /v1/repositories
+### GET /repositories
 
 Utilize o token gerado no endpoint anterior passando no header Authorization. 
 Você tem a possibilidade de filtrar os repositórios utilizando os seguintes query params:
 
 | Parâmetro  | Descrição  |  
 |------------|------------|
+|free_text|Campo de texto livre|
 | language   |Linguagem principal dos repositórios (caso nenhuma for inserida, o padrão é Ruby)| 
 | user | Repositórios públicos de determinado usuário|
 |    sort    |Realizar sort por stars, forks ou updated             |   
