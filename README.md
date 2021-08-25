@@ -76,21 +76,25 @@ curl --location --request GET 'localhost:3000/v1/repositories?language=javascrip
 Exemplo de response
 
 ```
-[
-    {
-        "full_name": "freeCodeCamp/freeCodeCamp",
-        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.",
-        "stargazers_count": 329000,
-        "forks_count": 26445,
-        "author_name": "freeCodeCamp"
-    },
-    {
-        "full_name": "vuejs/vue",
-        "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
-        "stargazers_count": 187276,
-        "forks_count": 29959,
-        "author_name": "vuejs"
-    },
-  ...
-]
+{
+    "page": "1",
+    "data": [
+        {
+            "full_name": "rails/rails",
+            "description": "Ruby on Rails",
+            "stargazers_count": 48906,
+            "forks_count": 19641,
+            "author_name": "rails"
+        },
+        {
+            "full_name": "jekyll/jekyll",
+            "description": ":globe_with_meridians: Jekyll is a blog-aware static site generator in Ruby",
+            "stargazers_count": 43209,
+            "forks_count": 9504,
+            "author_name": "jekyll"
+        },
+    ...
+    ]
+}
+ 
 ```
