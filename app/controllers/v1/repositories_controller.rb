@@ -15,7 +15,7 @@ class V1::RepositoriesController < V1::ApplicationController
        }
     end
 
-    render json: response
+    render json: {page: request.query_parameters[:page], data: response }
   end
 
   private 
