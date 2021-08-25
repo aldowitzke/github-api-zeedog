@@ -10,6 +10,12 @@ A aplicação foi construída utilizando as seguintes ferramentas:
 
 ## Começando
 
+### Heroku
+
+O projeto está no Heroku e você pode fazer as requisições a partir da base_url https://github-api-zeedog.herokuapp.com/v1 (doc mais abaixo)
+
+### Local
+
 Para instalar o projeto, rode os seguintes códigos no seu terminal dentro do seu dirétorio de projetos:
 ```
 1) Abra seu terminal e clone o projeto:
@@ -33,7 +39,7 @@ rspec
 
 ## Realizando requisições
 
-### GET /v1/authorization
+### GET /authorization
 
 Primeiramente, é necessário fazer uma requisição para o endpoint de authorizations para receber um token JWT
 
@@ -46,7 +52,7 @@ Status: 200 OK
 eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5ODU5MTAxfQ.kyJkZUD6tuOGhUCtHygkcjTpBGROadGBFrJiKxtAZuw
 ```
 
-### GET /v1/repositories
+### GET /repositories
 
 Utilize o token gerado no endpoint anterior passando no header Authorization. 
 Você tem a possibilidade de filtrar os repositórios utilizando os seguintes query params:
