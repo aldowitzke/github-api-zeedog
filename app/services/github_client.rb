@@ -2,16 +2,17 @@ class GithubClient
     include HTTParty
     base_uri 'https://api.github.com'
   
-    def initialize(query_params)      
+    def initialize(query_params) 
+      @free_text = query_params[:free_text]     
       @sort = query_params[:sort]
       @order = query_params[:order]
       @page = query_params[:page]
       @per_page = query_params[:per_page] ? query_params[:per_page] : 10
-      @query_string = create_query_string(query_params.except(:order, :sort, :page, :per_page))
+      @query_string = create_query_string(query_params.except(:order, :sort, :page, :per_page, :free_text))
     end
   
     def repos
-      repos = self.class.get("/search/repositories?q=#{@query_string}&sort=#{@sort}&order=#{@order}&page=#{@page}&per_page=#{@per_page}")
+      repos = self.class.get("/search/repositories?q=#{@free_text}#{@query_string}&sort=#{@sort}&order=#{@order}&page=#{@page}&per_page=#{@per_page}")
       
       return repos
     end
@@ -21,7 +22,7 @@ class GithubClient
     def create_query_string(query_params)
       query_string = ""    
 
-      language = query_params['language'].present? ? "" : "ruby"
+      language = query_params['language'].present? ? "" : "+language:ruby"
       query_string << language
 
       query_params.each do |key, value|
