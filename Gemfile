@@ -26,10 +26,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 
 gem 'httparty'
+gem 'jwt'
 
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
+  gem 'dotenv-rails'
 end
 
 group :development do
