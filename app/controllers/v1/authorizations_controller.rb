@@ -1,4 +1,4 @@
-class AuthorizationsController < ApplicationController
+class V1::AuthorizationsController < V1::ApplicationController
   def build_jwt(valid_for_minutes = 5)
     exp = Time.now.to_i + (valid_for_minutes*60)
     payload = { "iss": "aldowitzke",

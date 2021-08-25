@@ -1,4 +1,4 @@
-class RepositoriesController < ApplicationController
+class V1::RepositoriesController < V1::ApplicationController
   before_action :require_jwt
 
   def index    
@@ -42,7 +42,7 @@ class RepositoriesController < ApplicationController
       decoded_token = JWT.decode token, ENV["JWT_SECRET"], true
       return true
     rescue JWT::DecodeError
-      Rails.logger.warn "Error decoding the JWT: "+ e.to_s
+      Rails.logger.warn "Error decoding the JWT"
     end
     false
   end
