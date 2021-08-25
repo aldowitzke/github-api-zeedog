@@ -64,3 +64,24 @@ Exemplo de requisição
 curl --location --request GET 'localhost:3000/v1/repositories?language=javascript&sort=stars&order=desc&page=1&per_page=10' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5ODU5MTAxfQ.kyJkZUD6tuOGhUCtHygkcjTpBGROadGBFrJiKxtAZuw'
 ```
+Exemplo de response
+
+```
+[
+    {
+        "full_name": "freeCodeCamp/freeCodeCamp",
+        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.",
+        "stargazers_count": 329000,
+        "forks_count": 26445,
+        "author_name": "freeCodeCamp"
+    },
+    {
+        "full_name": "vuejs/vue",
+        "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+        "stargazers_count": 187276,
+        "forks_count": 29959,
+        "author_name": "vuejs"
+    },
+  ...
+]
+```
