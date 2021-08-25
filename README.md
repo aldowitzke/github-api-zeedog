@@ -96,5 +96,200 @@ Exemplo de response
     ...
     ]
 }
- 
 ```
+
+## Collection Postman
+
+Caso queira uma coleção do Postman já criada, segue abaixo no formato JSON. Basta importar no seu Postman e você terá seus endpoints prontos.
+
+```
+{
+	"info": {
+		"_postman_id": "f4249541-8edb-40c2-8389-28331854d772",
+		"name": "zeedog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/repositories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5OTA3MzQyfQ.Fs0UO5bWcJTeCNnCWALrWYmbRNvzE5Z5JVt6WCTOHtg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/repositories?sort=stars&order=desc&page=1&per_page=10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"repositories"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "javascript",
+							"disabled": true
+						},
+						{
+							"key": "user",
+							"value": "aldowitzke",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "stars"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "10"
+						},
+						{
+							"key": "free_text",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/authorization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/authorization",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"authorization"
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /authorization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://github-api-zeedog.herokuapp.com/v1/authorization",
+					"protocol": "https",
+					"host": [
+						"github-api-zeedog",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /repositories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhbGRvd2l0emtlIiwiZXhwIjoxNjI5OTA2Nzc3fQ.Bt20XqBRy3b4O_482Z0SeSYr-LSs_GDl69-JvjA-q2E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "free_text",
+						"value": "fretadao",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://github-api-zeedog.herokuapp.com/v1/repositories?language=go&order=stars&sort=desc&page=1&per_page=10",
+					"protocol": "https",
+					"host": [
+						"github-api-zeedog",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"repositories"
+					],
+					"query": [
+						{
+							"key": "free_text",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "language",
+							"value": "go"
+						},
+						{
+							"key": "user",
+							"value": "aldowitzke",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "stars"
+						},
+						{
+							"key": "sort",
+							"value": "desc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+```
+
